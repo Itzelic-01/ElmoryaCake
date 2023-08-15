@@ -1,0 +1,327 @@
+body, html {
+    height: 100%;
+    width: auto + 10px;
+}
+
+header {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 네비게이션바 */
+.Nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    justify-content: center;
+    transition: background-color 0.2s ease-in;
+    z-index: 100;
+}
+
+.Nav ul {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1vh;
+    /* background-color: #de6868; */
+}
+
+.Nav li {
+    padding: 0 20px;
+    margin: 0 40px;
+    display: flex;
+    justify-content: center;
+    /* background-color: #d61e1e; */
+}
+
+.Nav a {
+    text-decoration: none;
+    font-size: medium;
+    color: #4d4e50;
+    justify-content: center;
+    transition: transform 0.3s;
+    /* background-color: #d6ba1b; */
+}
+
+
+.Nav a img {
+    width: 100px;
+    display: block;
+    justify-content: center;
+    transition: transform 0.3s;
+    margin-right: 25px;
+}
+
+.Nav img:hover {
+    transform: scale(1.2);
+}
+
+.Nav a:hover {
+    text-decoration: underline;
+}
+
+/* 메인화면 */
+main {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+/* 사이드 링크 버튼 */
+.stickyBtn {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    align-content: center;
+}
+
+.stickyBtn .Btnbox {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+    animation: moveUpDown 1s infinite alternate;
+    align-items: flex-start;
+    margin: 10px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.stickyBtn .Btnbox p {
+    display: flex;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: small;
+    color:rgba(0, 0, 0, 1);
+    text-align: center;
+    margin-right: 6px;
+}
+
+.stickyBtn .button {
+    position: relative;
+    border: none;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+}
+
+.stickyBtn .button a {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(69, 69, 68, 0.6);
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stickyBtn .Btnbox:hover {
+    transform: translateY(-8px);
+}
+
+.stickyBtn .Btnbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s ease;
+}
+
+.stickyBtn .Btnbox:hover::before {
+    transform: skewX(45deg) translateX(-150px);
+}
+
+.stickyBtn .Btnbox .button img {
+    width: 100%;
+}
+
+/* Cake Section */
+section {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    /* background-color: #0076ff; */
+}
+
+.Cake {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0053b3; */
+    
+}
+
+.Photogrid {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    /* background-color: aquamarine; */
+    margin: 0;
+    padding: 0;
+}
+
+.Photogrid .row {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    /* background-color: #aa5b5b; */
+    margin: 0;
+    padding: 0;
+}
+
+.Photogrid .card {
+    width: 337px;
+    height: 550px;
+    flex-basis: calc(25% - 2em);
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    border-radius: 0;
+    border: 0;
+    margin: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(239, 205, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.3); /* 확대 후 왼쪽으로 이동 */
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card .content {
+    position: absolute; /* 추가된 부분 */
+    bottom: 0; /* 추가된 부분 */
+    left: 0; /* 추가된 부분 */
+    width: 100%; /* 추가된 부분 */
+    padding: 10px; /* 추가된 부분 */
+    color: #333; /* 추가된 부분 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.card .title {
+    color: #ffffff;
+    font-size: large;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: 'Gowun Batang', serif;
+    object-fit: cover;
+}
+
+.content p {
+    color: #ffffff;
+    font-size: 80%;
+    line-height: 150%;
+    position: relative; /* 애니메이션 대상의 위치를 지정하기 위해 추가 */
+    transition: transform 0.3s; /* 애니메이션의 속도와 효과를 설정 */
+    text-align: start;
+}
+
+/* Cake Card Hover */
+.card:hover .desc {
+    transform: translateY(-5px); /* hover 시 p 요소를 5px 위로 이동 */
+}
+
+.card:hover .content {
+    background-color: rgba(0, 0, 0, 0.2); /* 추가된 부분 */ 
+}
+
+/* Logo Section */
+.Logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(204, 245, 245);
+    padding: 130px;
+}
+
+.Logobox {
+    width: 90%;
+    height: auto;
+    /* background-color: aquamarine; */
+}
+
+.Logobox img {
+    width: 60%;
+    filter: opacity(0.5) drop-shadow(0 0 0 #262626);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    background-color: #2c3e50;
+    opacity: 0.9;
+    bottom: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .Nav ul {
+        display: block;
+        padding: 10px;
+    }
+
+    .Nav li {
+        padding: 5px;
+    }
+}
