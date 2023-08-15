@@ -91,7 +91,6 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
-    z-index: -999;
 }
 
 .stickyBtn .Btnbox {
@@ -122,6 +121,7 @@ main {
     display: flex;
     background-color: transparent;
     flex-direction: row;
+    z-index: 999;
 }
 
 .stickyBtn .button a {
@@ -141,7 +141,7 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.stickyBtn .Btnbo .button:hover {
+.stickyBtn .Btnbox .button a:hover {
     transform: translateY(-8px);
 }
 
