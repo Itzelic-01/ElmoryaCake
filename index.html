@@ -17,6 +17,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Diphylleia&family=Gowun+Batang:wght@700&family=Gowun+Dodum&family=Grandiflora+One&family=Gugi&family=IBM+Plex+Sans+KR:wght@100&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@800&family=Noto+Sans+KR:wght@100;400&family=Noto+Serif+KR&family=Playfair+Display&family=Stylish&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Diphylleia&family=Gowun+Batang:wght@700&family=Gowun+Dodum&family=Grandiflora+One&family=Gugi&family=IBM+Plex+Sans+KR:wght@100&family=Judson&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@800&family=Noto+Sans+KR:wght@100;400&family=Noto+Serif+KR&family=Playfair+Display&family=Stylish&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -28,10 +29,10 @@
                 </div> -->
                 <ul>
                     <li><a href="#cake">케이크</a></li>
-                    <li><a href="#class">클래스</a></li>
-                    <li><a href="#main"><img src="assets/logo/elmorya_golden.png" alt="로고"></a></li>
                     <li><a href="#story">소개</a></li>
-                    <li><a href="#locate">위치</a></li>
+                    <li><a href="#main" onclick="location.reload();"><img src="assets/logo/elmorya_golden.png" alt="로고"></a></li>
+                    <li><a href="#class">클래스</a></li>
+                    <li><a href="#address">위치</a></li>
                 </ul>
             </nav>
         </header>
@@ -75,7 +76,7 @@
 
 
             <!-- 케이크 섹션 -->
-            <section class="Cake">
+            <section class="Cake" id="cake">
                 <div class="Photogrid">
                     <div class="row">
 
@@ -198,16 +199,37 @@
                 </div>
             </section>
 
-            <section class="Story">
-                <div class="Title">
-                    <div class="Bline"></div>
-                    <p>ELMORYA's STORY</p>
-                </div>
+            <!-- 스토리 섹션 -->
+            <section class="Story" id="story">
                 <div class="Storybox">
-                    <img src="assets/story.jpeg" />
-                    <div class="content">
-                        <h3>엘모리아 케이크의 파티셰리입니다</h3>
-                        <p>저는 어려서부터..</p>
+                    <div class="Title">
+                        <h3 class="Bline"></h3><h3>ELMORYA's STORY</h3>
+                    </div>
+                    <div class="Contentbox">
+                        <img src="assets/story.jpg" />
+                        <div class="content">
+                            <h4>엘모리아 케이크의 파티셰리입니다</h4>
+                            <p> 저는 어려서부터 허약한 체질이어서 음식에 대한 알러지와 반응도가 민감한 아이로 자랐습니다.<br>
+                                그런 저에게는 감사하게도 음식솜씨가 좋은 어머님이 계셨습니다.<br>
+                                매일 좋은 식재료로 당일 만든 음식으로 식사를 차려주셨거든요.<br>
+                                어머니께서는 음식의 맛뿐만이 아니라 정갈하고 예쁘게 만드시는 분이었습니다.<br>
+                                <br>
+                                어떤 음식을 만들던 맛도 중요하지만  예쁘고 정갈해야 한다고 항상 말씀하셨습니다.<br>
+                                그래서 일까요? 맛과 디자인도 포기 못하고 집착하는 저를 보며 어머니의 조기 교육이<br>
+                                무섭구나 하며 웃을때가 종종 있습니다.<br>
+                                어머니의 유전자와 식재료의 경험을 바탕으로 지금은 파티쉐의 길을 걷고 있습니다.<br>
+                                <br>
+                                저는 이론을 중요하게 생각합니다. 기초적인 이론만으로도 제품의 완성도가 달라지게 되며<br>
+                                또한, 제품응용과 변형이 가능합니다.<br>
+                                체계적인 이론과 원리를 개인의 실력에 맞게 지도합니다.<br>
+                                <br>
+                                1949년 후쿠오카시(福岡市)에서 창립한 나카무라 조리제과전문학교는 2009년 서울에 분교를 열고<br>
+                                본교 수준의 체계적인 커리큘럼과 실습 과정을 통해 수많은 전문 파티시에를 양성해 왔습니다.<br>
+                                <br>
+                                엘모리아케이크의 오너파티셰는 6개월간의 수련과정을 거쳐 나카무라 아카데미 서울 분교의 제과 과정을<br>
+                                차석으로 수료했습니다.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -220,11 +242,11 @@
                 <p>I'm Ment!!</p>
             </section>
 
-            <section class="Class">
+            <section class="Class" id="class">
                 <p>I'm Class!!</p>
             </section>
 
-            <section class="Address">
+            <section class="Address" id="locate">
                 <p>I'm Address!!</p>
             </section>
         </main>
